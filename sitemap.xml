@@ -3,14 +3,14 @@
   
   <!-- Page d'accueil -->
   <url>
-    <loc>https://ton-pseudo.github.io/nom-de-ton-repo/</loc>
+    <loc>https://velagence.github.io/velagence/</loc>
     <lastmod>2026-09-01</lastmod>
     <priority>1.00</priority>
   </url>
 
   <!-- Page Contact -->
   <url>
-    <loc>https://ton-pseudo.github.io/nom-de-ton-repo/contact.html</loc>
+    <loc>https://velagence.github.io/velagence/contact.html</loc>
     <lastmod>2026-09-01</lastmod>
     <priority>0.80</priority>
   </url>
