@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth overflow-x-hidden">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velagence</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Masquer la barre de défilement pour Chrome, Safari et Opera */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Masquer la barre de défilement pour IE, Edge et Firefox */
+    html, body {
+      -ms-overflow-style: none;  /* IE et Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+  </style>
+</head>
+<body class="bg-white text-zinc-900 font-sans antialiased selection:bg-zinc-900 selection:text-white w-full overflow-x-hidden">
+  
+
+  <!-- HERO SECTION -->
+  <header class="min-h-screen flex flex-col justify-between p-6 md:p-12">
+    
+    <!-- Titre Géant (Style "No graphism") -->
+    <div class="pt-8 w-full overflow-hidden">
+      <h1 class="text-[12vw] font-medium leading-none tracking-tighter uppercase select-none flex items-start">
+        <span>Velagence</span>
+        
+        <span class="text-xs md:text-2xl font-light leading-none -ml-1">®</span>
+      </h1>
+
+      <p class="mt-4 text-sm md:text-base font-semibold uppercase tracking-widest text-zinc-500">
+        Une agence qui croit en vous.
+      </p>
+    </div>
+
+    <!-- Description, CTA & Navigation -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end pb-4">
+      
+      <!-- Texterie & Bouton -->
+      <div class="md:col-span-5 space-y-6">
+        <p class="text-lg md:text-xl font-normal leading-relaxed text-zinc-800">
+          Velagence, agence de mannequinat basée en France. Découvrez nos mannequins et nos services pour vos projets, shootings et défilés.
+        </p>
+        <a href="contact.html" class="inline-block bg-[#365354] text-white text-xs font-semibold uppercase tracking-widest px-8 py-4 rounded-full transition-transform hover:scale-105">
+          Nous contacter
+        </a>
+      </div>
+
+      <!-- Navigation Alignée à Droite -->
+      <nav class="md:col-span-7 flex flex-wrap md:justify-end gap-6 text-sm md:text-base font-medium">
+        <a href="#board" class="border-b-2 border-zinc-900 pb-1">Talents</a>
+        <a href="#editorial" class="text-zinc-500 hover:text-zinc-900 transition-colors pb-1">Éditoriaux</a>
+        <a href="#about" class="text-zinc-500 hover:text-zinc-900 transition-colors pb-1">L'Agence</a>
+        <a href="#contact" class="text-zinc-500 hover:text-zinc-900 transition-colors pb-1">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- SECTION GRILLE TALENTS (BLOC COULEUR) -->
+  <section id="board" class="bg-[#eef0fe] min-h-screen p-6 md:p-12 py-20">
+    <div class="flex justify-between items-baseline mb-16 border-b border-zinc-300 pb-6">
+      <h2 class="text-5xl md:text-7xl font-medium tracking-tight">Nos mannequins</h2>
+      <span class="text-sm uppercase tracking-widest text-zinc-500">*Actuellement présent chez nous*</span>
+    </div>
+
+    <!-- Grille Mannequins -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Carte Mannequin 1 -->
+      <div class="group cursor-pointer">
+        <div class="aspect-[3/4] bg-zinc-200 overflow-hidden mb-4">
+          <img src="src/tricia.png" alt="Model" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="flex justify-between items-baseline">
+          <h3 class="text-xl font-medium">Tricia</h3>
+          <span class="text-sm text-zinc-500">_</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION ÉDITORIAUX -->
+  <section id="editorial" class="bg-white min-h-screen p-6 md:p-12 py-20 w-full">
+    <div class="flex justify-between items-baseline mb-16 border-b border-zinc-200 pb-6">
+      <h2 class="text-5xl md:text-7xl font-medium tracking-tight uppercase">Éditoriaux</h2>
+      <span class="text-sm uppercase tracking-widest text-zinc-500">*Campagnes & Projets*</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <!-- Projet 1 -->
+      <div class="group cursor-pointer space-y-4">
+        <div class="aspect-[16/10] bg-zinc-100 overflow-hidden">
+          
+          <img src="src/avrilteaser.jpg" alt="Editorial 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+        
+        
+        </div>
+        <div class="flex justify-between items-center pt-2">
+          <h3 class="text-2xl font-medium"><a href="https://www.avril-beaute.fr/">Avril cosmétiques</a></h3>
+          <span class="text-xs uppercase tracking-widest text-zinc-400">2026</span>
+        </div>
+      </div>
+
+      <!-- Projet 2 -->
+      <div class="group cursor-pointer space-y-4">
+        <div class="aspect-[16/10] bg-zinc-100 overflow-hidden">
+          <!--
+          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80" alt="Editorial 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+        -->
+        </div>
+        <div class="flex justify-between items-center pt-2">
+          <h3 class="text-2xl font-medium">_</h3>
+          <span class="text-xs uppercase tracking-widest text-zinc-400">_</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION L'AGENCE -->
+  <section id="about" class="bg-zinc-100 min-h-[80vh] p-6 md:p-12 py-24 w-full flex flex-col justify-between">
+    <div class="flex justify-between items-baseline border-b border-zinc-300 pb-6">
+      <h2 class="text-5xl md:text-7xl font-medium tracking-tight uppercase">L'Agence</h2>
+      <span class="text-sm uppercase tracking-widest text-zinc-500">*Vision & Approche*</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 my-12">
+      <div class="md:col-span-8 md:col-start-1">
+        <p class="text-2xl md:text-4xl font-normal leading-snug tracking-tight text-zinc-800">
+          Velagence est une agence de mannequinat basée en France, plus précisément dans le Morbihan. Nous avons une équipe qui sait représenter et accompagner chaques mannequins dans leurs carrières afin de les pousser à atteindre leurs objectifs.
+        </p>
+      </div>
+      <div class="md:col-span-4 space-y-6 text-sm text-zinc-600 leading-relaxed md:pt-2">
+        <p>
+          Chaque profil est unique, et nous prendrons toujours le temps de vous comprendre.
+        <p class="text-zinc-900 font-medium">
+          _Basé à Lorient & disponible à l'international.
+        </p>
+      </div>
+    </div>
+
+    <div class="pt-8 border-t border-zinc-300">
+      <a href="contact.html" class="inline-block bg-zinc-900 text-white text-xs font-semibold uppercase tracking-widest px-8 py-4 rounded-full transition-transform hover:scale-105">
+        Postuler comme mannequin
+      </a>
+    </div>
+  </section>
+
+
+  <!-- PIED DE PAGE / FOOTER -->
+  <footer id="contact" class="bg-zinc-900 text-white p-6 md:p-12 pt-20 pb-12 w-full overflow-hidden">
+    
+    <!-- Appel à l'action / Email principal -->
+    <div class="mb-16 border-b border-zinc-800 pb-12">
+      <span class="text-xs uppercase tracking-widest text-zinc-500 block mb-4">Booking & Demandes</span>
+      <h2 class="text-3xl md:text-6xl font-medium tracking-tight mb-6">Travaillons ensemble.</h2>
+      <a href="mailto:velagence@icloud.com" class="text-lg md:text-3xl text-zinc-400 hover:text-white transition-colors underline decoration-1 underline-offset-8">
+        velagence@icloud.com
+      </a>
+    </div>
+
+    <!-- Grille d'informations -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-sm mb-20">
+      
+      <!-- Colonne 1 : Bureau -->
+      <div>
+        <h3 class="text-xs uppercase tracking-widest text-zinc-500 mb-4 font-semibold">Secteur</h3>
+        <p class="text-zinc-400 leading-relaxed">
+          _Secteur de Lorient<br>
+          _56100 Morbihan<br>
+          <span class="text-zinc-500 inline-block mt-2">+33 (0)6 33 69 48 80</span>
+        </p>
+      </div>
+
+      <!-- Colonne 2 : Navigation -->
+      <div>
+        <h3 class="text-xs uppercase tracking-widest text-zinc-500 mb-4 font-semibold">Navigation</h3>
+        <ul class="space-y-2 text-zinc-400">
+          <li><a href="#board" class="hover:text-white transition-colors">Mannequins</a></li>
+          <li><a href="#editorial" class="hover:text-white transition-colors">Éditoriaux</a></li>
+          <li><a href="#about" class="hover:text-white transition-colors">L'Agence</a></li>
+          <li><a href="contact.html" class="hover:text-white transition-colors">Devenir Mannequin</a></li>
+        </ul>
+      </div>
+
+      <!-- Colonne 3 : Réseaux -->
+      <div>
+        <h3 class="text-xs uppercase tracking-widest text-zinc-500 mb-4 font-semibold">Réseaux</h3>
+        <ul class="space-y-2 text-zinc-400">
+          <li><a href="https://www.instagram.com/velagence/" class="hover:text-white transition-colors">Instagram</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Models.com</a></li>
+        </ul>
+      </div>
+
+      <!-- Colonne 4 : Légal -->
+      <div>
+        <h3 class="text-xs uppercase tracking-widest text-zinc-500 mb-4 font-semibold">Légal</h3>
+        <ul class="space-y-2 text-zinc-400">
+          <li><a href="mentionlegal.html" class="hover:text-white transition-colors">Mentions légales</a></li>
+          <li><a href="confidentialite.html" class="hover:text-white transition-colors">Confidentialité</a></li>
+          <li><a href="cookies.html" class="hover:text-white transition-colors">Gestion des cookies</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bas de footer / Copyright -->
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pt-8 border-t border-zinc-800 text-xs text-zinc-500 gap-4">
+      <p>© Velagence. Tous droits réservés.</p>
+      <p class="uppercase tracking-widest">Designed for Velagence</p>
+    </div>
+
+  </footer>
+
+</body>
+</html>
