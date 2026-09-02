@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth overflow-x-hidden">
+<html lang="fr" class="scroll-smooth">
 <head>
   <meta name="google-site-verification" content="googlec748089e33b22273.html" />
   <meta charset="UTF-8">
@@ -7,21 +7,46 @@
   <title>Velagence</title>
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- Style OverlayScrollbars (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/2.8.2/styles/overlayscrollbars.min.css">
+  <!-- Script OverlayScrollbars (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/2.8.2/browser/overlayscrollbars.browser.es6.min.js"></script>
+
   <style>
-    /* Masquer la barre de défilement pour Chrome, Safari et Opera */
+    /* Masquer la barre native du navigateur */
+    html, body {
+      scrollbar-width: none !important;
+      -ms-overflow-style: none !important;
+    }
     ::-webkit-scrollbar {
-      display: none;
+      display: none !important;
+      width: 0 !important;
     }
 
-    /* Masquer la barre de défilement pour IE, Edge et Firefox */
-    html, body {
-      -ms-overflow-style: none;  /* IE et Edge */
-      scrollbar-width: none;  /* Firefox */
+    /* Ligne de défilement filiforme & brutaliste */
+    .os-scrollbar-vertical {
+      width: 2px !important;
+      right: 0 !important;
+      padding: 0 !important;
+    }
+    
+    .os-scrollbar-handle {
+      background: #18181b !important;
+      border-radius: 0 !important;
+      opacity: 0.35;
+      transition: opacity 0.25s ease !important;
+    }
+
+    .os-scrollbar-handle:hover {
+      opacity: 1 !important;
+    }
+
+    .os-scrollbar-track {
+      background: transparent !important;
     }
   </style>
 </head>
-<body class="bg-white text-zinc-900 font-sans antialiased selection:bg-zinc-900 selection:text-white w-full overflow-x-hidden">
-  
+<body class="bg-white text-zinc-900 font-sans antialiased selection:bg-zinc-900 selection:text-white w-full">
 
   <!-- HERO SECTION -->
   <header class="min-h-screen flex flex-col justify-between p-6 md:p-12">
@@ -30,7 +55,6 @@
     <div class="pt-8 w-full overflow-hidden">
       <h1 class="text-[12vw] font-medium leading-none tracking-tighter uppercase select-none flex items-start">
         <span>Velagence</span>
-        
         <span class="text-xs md:text-2xl font-light leading-none -ml-1">®</span>
       </h1>
 
@@ -98,10 +122,7 @@
       <!-- Projet 1 -->
       <div class="group cursor-pointer space-y-4">
         <div class="aspect-[16/10] bg-zinc-100 overflow-hidden">
-          
           <img src="src/avrilteaser.jpg" alt="Editorial 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-        
-        
         </div>
         <div class="flex justify-between items-center pt-2">
           <h3 class="text-2xl font-medium"><a href="https://www.avril-beaute.fr/">Avril cosmétiques</a></h3>
@@ -112,9 +133,6 @@
       <!-- Projet 2 -->
       <div class="group cursor-pointer space-y-4">
         <div class="aspect-[16/10] bg-zinc-100 overflow-hidden">
-          <!--
-          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80" alt="Editorial 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-        -->
         </div>
         <div class="flex justify-between items-center pt-2">
           <h3 class="text-2xl font-medium">_</h3>
@@ -134,12 +152,13 @@
     <div class="grid grid-cols-1 md:grid-cols-12 gap-8 my-12">
       <div class="md:col-span-8 md:col-start-1">
         <p class="text-2xl md:text-4xl font-normal leading-snug tracking-tight text-zinc-800">
-          Velagence est une agence de mannequinat basée en France, plus précisément dans le Morbihan. Nous avons une équipe qui sait représenter et accompagner chaque mannequin dans leurs carrières afin de les pousser à atteindre leurs objectifs.
+          Velagence est une agence de mannequinat basée en France, plus précisément dans le Morbihan. Nous avons une équipe qui sait représenter et accompagner chaque mannequin dans sa carrière afin de le pousser à atteindre ses objectifs.
         </p>
       </div>
       <div class="md:col-span-4 space-y-6 text-sm text-zinc-600 leading-relaxed md:pt-2">
         <p>
           Chaque profil est unique, et nous prendrons toujours le temps de vous comprendre.
+        </p>
         <p class="text-zinc-900 font-medium">
           _Basé à Lorient & disponible à l'international.
         </p>
@@ -152,7 +171,6 @@
       </a>
     </div>
   </section>
-
 
   <!-- PIED DE PAGE / FOOTER -->
   <footer id="contact" class="bg-zinc-900 text-white p-6 md:p-12 pt-20 pb-12 w-full overflow-hidden">
@@ -219,5 +237,19 @@
 
   </footer>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const { OverlayScrollbars } = OverlayScrollbarsGlobal;
+
+      OverlayScrollbars(document.body, {
+        scrollbars: {
+          theme: 'os-theme-dark',
+          autoHide: 'leave',
+          autoHideDelay: 500,
+          clickScroll: true
+        }
+      });
+    });
+  </script>
 </body>
 </html>
